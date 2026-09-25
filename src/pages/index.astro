@@ -47,6 +47,7 @@ import {
   Download,
   Check,
   Minus,
+  ImageOff,
 } from "@lucide/astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -336,7 +337,7 @@ const rows = [
                 Advanced Fleet Operations Platform
               </p>
               <h1
-                class="mt-5 max-w-5xl font-display text-5xl leading-[0.94] text-white sm:text-6xl lg:text-[5.1rem] xl:text-[5.7rem]"
+                class="mt-5 max-w-5xl font-display text-4xl leading-[0.98] text-white sm:text-5xl lg:text-[4rem] xl:text-[4.5rem]"
               >
                 Operate, Not Just Track. <span class="text-brand-orange"
                   >One System</span
@@ -345,7 +346,7 @@ const rows = [
             </div>
 
             <div class="lg:pt-20">
-              <p class="max-w-xl text-base leading-8 text-white/76 sm:text-lg">
+              <p class="max-w-xl text-base leading-7 text-white/76">
                 Deploy across 5 or 5,000 commercial vehicles in a single day
                 with zero technician downtime. Turn live telematics, AI expense
                 capture, and precision multi-axle routing into measurable EBITDA
@@ -427,7 +428,7 @@ const rows = [
             Performance Metrics
           </p>
           <h2
-            class="mt-4 font-display text-4xl leading-[1.02] text-brand-blue sm:text-5xl lg:text-6xl"
+            class="mt-4 font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
           >
             Built To Improve Fleet Performance
           </h2>
@@ -444,10 +445,10 @@ const rows = [
             >
               <Clock3 class="size-4" stroke-width={2.2} />
             </div>
-            <p class="font-display text-3xl leading-none text-brand-orange">
+            <p class="font-display text-2xl leading-none text-brand-orange">
               1-Day
             </p>
-            <h3 class="mt-2 font-display text-xl leading-none text-brand-blue">
+            <h3 class="mt-2 font-display text-lg leading-none text-brand-blue">
               Zero-Install Deployment
             </h3>
             <p class="mt-3 text-sm leading-6 text-brand-muted">
@@ -471,10 +472,10 @@ const rows = [
             >
               <RadioTower class="size-4" stroke-width={2.2} />
             </div>
-            <p class="font-display text-3xl leading-none text-brand-blue">
+            <p class="font-display text-2xl leading-none text-brand-blue">
               99%
             </p>
-            <h3 class="mt-2 font-display text-xl leading-none text-brand-blue">
+            <h3 class="mt-2 font-display text-lg leading-none text-brand-blue">
               Contractual SLA Uptime
             </h3>
             <p class="mt-3 text-sm leading-6 text-brand-muted">
@@ -509,10 +510,10 @@ const rows = [
             >
               <TrendingDown class="size-4" stroke-width={2.2} />
             </div>
-            <p class="font-display text-3xl leading-none text-brand-orange">
+            <p class="font-display text-2xl leading-none text-brand-orange">
               22.8%
             </p>
-            <h3 class="mt-2 font-display text-xl leading-none text-brand-blue">
+            <h3 class="mt-2 font-display text-lg leading-none text-brand-blue">
               Fuel & Corridor Savings
             </h3>
             <p class="mt-3 text-sm leading-6 text-brand-muted">
@@ -538,10 +539,10 @@ const rows = [
             >
               <MonitorCheck class="size-4" stroke-width={2.2} />
             </div>
-            <p class="font-display text-3xl leading-none text-brand-blue">
+            <p class="font-display text-2xl leading-none text-brand-blue">
               100%
             </p>
-            <h3 class="mt-2 font-display text-xl leading-none text-brand-blue">
+            <h3 class="mt-2 font-display text-lg leading-none text-brand-blue">
               Offline-Resilient Telemetry
             </h3>
             <p class="mt-3 text-sm leading-6 text-brand-muted">
@@ -558,12 +559,12 @@ const rows = [
         <div class="max-w-5xl">
           <p class="eyebrow">DISRUPTING LEGACY TELEMATICS</p>
           <h2
-            class="mt-5 max-w-4xl font-display text-4xl leading-[1.04] text-brand-blue sm:text-5xl lg:text-6xl"
+            class="mt-5 max-w-4xl font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
           >
             The 1-Day Activation <span class="text-brand-orange">vs</span> The 60-Day
             Hardware Bottleneck
           </h2>
-          <p class="mt-6 max-w-4xl text-lg leading-8 text-brand-muted">
+          <p class="mt-6 max-w-4xl text-base leading-7 text-brand-muted">
             Legacy telematics players force African operations managers into
             crippling depot scheduling, auto-electrician delays, and inflexible
             36-month contracts. NetTrax flips the dynamic with software-first
@@ -588,7 +589,7 @@ const rows = [
                   Legacy Friction
                 </p>
                 <h3
-                  class="mt-3 font-display text-3xl leading-none text-brand-blue sm:text-4xl"
+                  class="mt-3 font-display text-2xl leading-none text-brand-blue sm:text-3xl"
                 >
                   The 60-Day Hardware Bottleneck
                 </h3>
@@ -701,7 +702,7 @@ const rows = [
                   Zero-Install Deployment
                 </p>
                 <h3
-                  class="mt-3 font-display text-3xl leading-none text-white sm:text-4xl"
+                  class="mt-3 font-display text-2xl leading-none text-white sm:text-3xl"
                 >
                   The 1-Day Fleet Activation
                 </h3>
@@ -815,11 +816,11 @@ const rows = [
               System Architecture & Data Pipelines
             </p>
             <h2
-              class="mt-5 max-w-5xl font-display text-5xl leading-[1.02] tracking-wide text-brand-blue sm:text-6xl lg:text-7xl"
+              class="mt-5 max-w-5xl font-display text-3xl leading-[1.04] tracking-wide text-brand-blue sm:text-4xl lg:text-5xl"
             >
               The NetTrax 5-Layer Technology Stack
             </h2>
-            <p class="mt-5 max-w-5xl text-lg leading-8 text-brand-muted">
+            <p class="mt-5 max-w-5xl text-base leading-7 text-brand-muted">
               Purpose-engineered separation of concerns across edge smartphones,
               real-time ingestion pipelines, dispatch state machines,
               proprietary matrix engines, and compliant archive storage.
@@ -864,7 +865,7 @@ const rows = [
                 >
                   Architectural Boundary Philosophy
                 </h3>
-                <p class="mt-2 max-w-5xl text-lg leading-8 text-[#07182d]">
+                <p class="mt-2 max-w-5xl text-base leading-7 text-[#07182d]">
                   "The routing engine answers road cost from A to B. The NetTrax
                   platform decides which questions to ask and how to orchestrate
                   shifts when reality changes."
@@ -1004,7 +1005,7 @@ const rows = [
                     <div class="flex gap-5">
                       <span
                         class:list={[
-                          "relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl font-display text-2xl text-white shadow-md ring-4 ring-[#eef5ff]",
+                          "relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl font-display text-xl text-white shadow-md ring-4 ring-[#eef5ff]",
                           l.badge,
                         ]}
                       >
@@ -1024,7 +1025,7 @@ const rows = [
                             {l.mono}
                           </span>
                         </div>
-                        <h3 class="mt-3 font-display text-2xl leading-none text-brand-blue">
+                        <h3 class="mt-3 font-display text-xl leading-none text-brand-blue sm:text-2xl">
                           {l.title}
                         </h3>
                         <p class="mt-2 text-sm leading-6 text-brand-muted">
@@ -1034,7 +1035,7 @@ const rows = [
                     </div>
 
                     <div class="border-brand-border lg:border-l lg:pl-8">
-                      <p class="text-[0.95rem] leading-7 text-[#4b352f]">
+                      <p class="text-sm leading-6 text-[#4b352f]">
                         {l.body}
                       </p>
                       <div class="mt-4 grid gap-2.5 sm:grid-cols-2">
@@ -1097,11 +1098,11 @@ const rows = [
               Proprietary Pro Routing
             </p>
             <h2
-              class="mt-4 font-display text-4xl leading-[1.02] text-brand-blue sm:text-5xl lg:text-6xl"
+              class="mt-4 font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
             >
               Reachability, Axle-Load & Elevation Engine
             </h2>
-            <p class="mt-5 text-base leading-7 text-brand-muted sm:text-lg">
+            <p class="mt-5 text-base leading-7 text-brand-muted">
               Standard consumer GPS algorithms treat 32-ton superlink trucks
               like hatchback cars. NetTrax incorporates commercial weight
               limits, gradient fuel penalties, and true travel-time polygon
@@ -1194,7 +1195,7 @@ const rows = [
           <!-- Pipeline -->
           <div class="flex flex-col">
             <h3
-              class="font-display text-2xl leading-none text-brand-blue sm:text-3xl"
+              class="font-display text-xl leading-none text-brand-blue sm:text-2xl"
             >
               The Precision Commercial Routing Pipeline
             </h3>
@@ -1244,11 +1245,11 @@ const rows = [
               Proprietary Dispatch Intelligence
             </p>
             <h2
-              class="mt-4 font-display text-4xl leading-[1.02] text-brand-blue sm:text-5xl lg:text-6xl"
+              class="mt-4 font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
             >
               Multi-Stop Route Optimization & Sequential Dispatch
             </h2>
-            <p class="mt-5 text-base leading-7 text-brand-muted sm:text-lg">
+            <p class="mt-5 text-base leading-7 text-brand-muted">
               Solve complex delivery rounds in milliseconds. NetTrax reorders
               multi-point stops by travel time and distance, cutting deadhead
               kilometers and eliminating driver routing guesswork across urban
@@ -1270,7 +1271,7 @@ const rows = [
           <!-- Feature list -->
           <div class="flex flex-col">
             <h3
-              class="font-display text-2xl leading-none text-brand-blue sm:text-3xl"
+              class="font-display text-xl leading-none text-brand-blue sm:text-2xl"
             >
               Dispatcher Advantages & Routing Engine
             </h3>
@@ -1362,7 +1363,7 @@ const rows = [
           <div>
             <p class="eyebrow">Built For Real Fleet Controllers</p>
             <h2
-              class="mt-3 max-w-3xl font-display text-4xl leading-[1.02] text-brand-blue sm:text-5xl lg:text-[3.1rem]"
+              class="mt-3 max-w-3xl font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
             >
               Enterprise Operational Modules
             </h2>
@@ -1417,7 +1418,7 @@ const rows = [
                         <p class="font-ui text-[0.68rem] font-bold uppercase tracking-[0.14em] text-brand-orange">
                           {m.eyebrow}
                         </p>
-                        <h3 class="mt-1.5 font-display text-2xl leading-none text-brand-blue sm:text-3xl">
+                        <h3 class="mt-1.5 font-display text-xl leading-none text-brand-blue sm:text-2xl">
                           {m.title}
                         </h3>
                         <p class="mt-1.5 max-w-4xl text-sm leading-6 text-brand-muted">
@@ -1437,13 +1438,26 @@ const rows = [
                 </div>
 
                 <div class="mt-3 overflow-hidden rounded-2xl border border-brand-border bg-white shadow-2xl shadow-brand-blue/12">
-                  <img
-                    src={m.image}
-                    alt={`NetTrax ${m.title} workspace interface`}
-                    class="w-full"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div class="aspect-video w-full">
+                    {m.image ? (
+                      <img
+                        src={m.image}
+                        alt={`NetTrax ${m.title} workspace interface`}
+                        class="h-full w-full object-cover object-top"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      <div class="flex h-full flex-col items-center justify-center gap-3 bg-[#f8fbfd] p-10 text-center">
+                        <span class="grid size-12 place-items-center rounded-2xl bg-white text-brand-muted shadow-sm">
+                          <ImageOff class="size-6" stroke-width={1.8} />
+                        </span>
+                        <p class="font-ui text-sm font-bold uppercase tracking-wide text-brand-muted">
+                          Workspace Preview Coming Soon
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </article>
             ))
@@ -1489,12 +1503,12 @@ const rows = [
           Quantified Business Value
         </p>
         <h2
-          class="mt-4 max-w-3xl font-display text-4xl leading-[1.02] text-brand-blue sm:text-5xl lg:text-6xl"
+          class="mt-4 max-w-3xl font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
         >
           Calculate Your Fleet's EBITDA Impact
         </h2>
         <p
-          class="mt-5 max-w-2xl text-base leading-7 text-brand-muted sm:text-lg"
+          class="mt-5 max-w-2xl text-base leading-7 text-brand-muted"
         >
           Adjust your parameters to see how NetTrax elevation routing, stop
           optimization, and AI receipt digitisation translate into direct
@@ -1626,7 +1640,7 @@ const rows = [
                 Estimated Monthly Diesel Savings
               </p>
               <p
-                class="mt-1 font-display text-5xl leading-none text-brand-orange-soft sm:text-6xl"
+                class="mt-1 font-display text-4xl leading-none text-brand-orange-soft sm:text-5xl"
               >
                 R <span id="monthlySavings">189,000</span>
               </p>
@@ -1665,7 +1679,7 @@ const rows = [
                 Annual Projected EBITDA Boost
               </p>
               <p
-                class="mt-1 font-display text-4xl leading-none text-emerald-400 sm:text-5xl"
+                class="mt-1 font-display text-3xl leading-none text-emerald-400 sm:text-4xl"
               >
                 R <span id="annualBoost">2,268,000</span>
               </p>
@@ -1782,12 +1796,12 @@ const rows = [
           Feature Comparison
         </p>
         <h2
-          class="mt-4 max-w-3xl font-display text-4xl leading-[1.02] text-brand-blue sm:text-5xl lg:text-6xl"
+          class="mt-4 max-w-3xl font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
         >
           NetTrax Standard vs NetTrax Pro
         </h2>
         <p
-          class="mt-5 max-w-2xl text-base leading-7 text-brand-muted sm:text-lg"
+          class="mt-5 max-w-2xl text-base leading-7 text-brand-muted"
         >
           Select the license tier matching your operational complexity. Upgrade
           individual vehicles dynamically as long-haul contracts expand.
@@ -1887,12 +1901,12 @@ const rows = [
           Enterprise Integration
         </p>
         <h2
-          class="mt-4 max-w-4xl font-display text-4xl leading-[1.02] text-brand-blue sm:text-5xl lg:text-6xl"
+          class="mt-4 max-w-4xl font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
         >
           Bespoke Engineering & Four Evaluation Paths
         </h2>
         <p
-          class="mt-5 max-w-3xl text-base leading-7 text-brand-muted sm:text-lg"
+          class="mt-5 max-w-3xl text-base leading-7 text-brand-muted"
         >
           No fleet operates in isolation. NetTrax interfaces with your existing
           ERP, weighing bridges, and fuel cards while offering clear, de-risked
@@ -2005,7 +2019,7 @@ const rows = [
                 99% Monthly SLA with Financial Backing
               </h2>
               <p
-                class="mt-5 max-w-3xl text-base leading-7 text-brand-muted sm:text-lg"
+                class="mt-5 max-w-3xl text-base leading-7 text-brand-muted"
               >
                 We treat telematics as mission-critical civil infrastructure. If
                 our monthly core platform uptime falls below 99.0%, enterprise
@@ -2055,11 +2069,11 @@ const rows = [
           Zero Install · Immediate Field Testing
         </p>
         <h2
-          class="mx-auto mt-8 max-w-5xl font-sans text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+          class="mx-auto mt-8 max-w-5xl font-sans text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
         >
           Ready to Modernize Your Fleet in Under 24 Hours?
         </h2>
-        <p class="mx-auto mt-6 max-w-4xl text-lg leading-8 text-white/82">
+        <p class="mx-auto mt-6 max-w-4xl text-base leading-7 text-white/82">
           Join hundreds of commercial transporters across South Africa, Kenya,
           and Nigeria who replaced months of hardware downtime with 1-day
           deployment.
@@ -2106,7 +2120,7 @@ const rows = [
               class="h-10 w-auto"
               loading="lazy"
             />
-            <p class="mt-6 text-xl font-semibold text-brand-blue">
+            <p class="mt-6 text-lg font-semibold text-brand-blue">
               Built for Africa. Engineered for the World.
             </p>
             <p class="mt-3 max-w-3xl text-base leading-7 text-brand-muted">
