@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-ui: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-brand-orange: #ff5a00;
+  --color-brand-orange-hover: #e94f00;
+  --color-brand-orange-soft: #fff0e6;
+  --color-brand-blue: #004a68;
+  --color-brand-blue-dark: #002f47;
+  --color-brand-blue-soft: #eaf7fc;
+  --color-brand-ice: #d8f0f8;
+  --color-brand-border: #c9e7ef;
+  --color-brand-text: #083f5a;
+  --color-brand-muted: #4a6b7a;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --radius-card: 0.75rem;
+    --shadow-card: 0 18px 50px rgb(0 74 104 / 0.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background: #ffffff;
+    color: var(--color-brand-text);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-brand-orange);
+    color: #ffffff;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img,
+  svg {
+    display: block;
+  }
+}
+
+@layer components {
+  .container-page {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1560px;
+    margin-inline: auto;
+    padding-inline: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-inline: 5rem;
+    }
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-brand-orange);
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    width: 2.5rem;
+    height: 0.25rem;
+    border-radius: 999px;
+    background: currentColor;
+    content: "";
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border-radius: 0.75rem;
+    background: var(--color-brand-orange);
+    padding: 1rem 1.6rem;
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: background-color 180ms ease, transform 180ms ease;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-brand-orange-hover);
+    transform: translateY(-1px);
+  }
+
+  .card-surface {
+    border: 1px solid var(--color-brand-border);
+    border-radius: var(--radius-card);
+    background: #ffffff;
+    box-shadow: var(--shadow-card);
+  }
+}
