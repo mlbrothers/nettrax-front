@@ -84,7 +84,7 @@
   .eyebrow::before {
     width: 2.5rem;
     height: 0.25rem;
-    border-radius: 999px;
+    border-radius: 0.125rem;
     background: currentColor;
     content: "";
   }

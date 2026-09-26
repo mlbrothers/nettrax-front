@@ -383,7 +383,7 @@ const currentYear = new Date().getFullYear();
     >
       <div class="container-page">
         <div
-          class="-mt-40 overflow-hidden rounded-[2rem] border border-white/10 bg-white shadow-2xl shadow-black/30 lg:-mt-52"
+          class="-mt-40 overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl shadow-black/30 lg:-mt-52"
         >
           <div
             class="flex items-center justify-between border-b border-brand-border bg-white px-5 py-4"
@@ -399,7 +399,7 @@ const currentYear = new Date().getFullYear();
               Fleet Command Overview
             </p>
             <span
-              class="rounded-full bg-brand-orange px-3 py-1 font-ui text-[0.65rem] font-bold uppercase text-white"
+              class="rounded-md bg-brand-orange px-3 py-1 font-ui text-[0.65rem] font-bold uppercase text-white"
             >
               Live
             </span>
@@ -424,7 +424,7 @@ const currentYear = new Date().getFullYear();
       <div class="container-page">
         <div id="solutions" class="mx-auto max-w-3xl text-center">
           <p
-            class="mx-auto inline-flex items-center gap-3 font-ui text-sm font-bold uppercase tracking-[0.08em] text-brand-muted before:h-1 before:w-14 before:rounded-full before:bg-brand-orange after:h-1 after:w-14 after:rounded-full after:bg-brand-orange"
+            class="mx-auto inline-flex items-center gap-3 font-ui text-sm font-bold uppercase tracking-[0.08em] text-brand-muted before:h-1 before:w-14 before:rounded-sm before:bg-brand-orange after:h-1 after:w-14 after:rounded-sm after:bg-brand-orange"
           >
             Performance Metrics
           </p>
@@ -831,17 +831,17 @@ const currentYear = new Date().getFullYear();
             class="flex flex-wrap gap-3 font-ui text-sm font-bold text-brand-muted"
           >
             <span
-              class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm"
+              class="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 shadow-sm"
               ><span class="size-2.5 rounded-full bg-brand-orange"></span>Edge
               (Mobile)</span
             >
             <span
-              class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm"
+              class="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 shadow-sm"
               ><span class="size-2.5 rounded-full bg-emerald-600"></span>Cloud
               Core</span
             >
             <span
-              class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm"
+              class="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 shadow-sm"
               ><span class="size-2.5 rounded-full bg-brand-blue"></span>Vault
               Storage</span
             >
@@ -1114,7 +1114,7 @@ const currentYear = new Date().getFullYear();
               zones.map((z) => (
                 <span
                   class:list={[
-                    "inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 font-ui text-xs font-bold",
+                    "inline-flex items-center gap-2 rounded-lg border px-3.5 py-1.5 font-ui text-xs font-bold",
                     zoneStyles[z.tone].chip,
                   ]}
                 >
@@ -1149,7 +1149,7 @@ const currentYear = new Date().getFullYear();
                 </p>
               </div>
               <span
-                class="hidden rounded-full bg-[#eef5ff] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
+                class="hidden rounded-md bg-[#eef5ff] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
               >
                 15 / 30 / 45 min overlay
               </span>
@@ -1257,7 +1257,7 @@ const currentYear = new Date().getFullYear();
           </div>
 
           <span
-            class="inline-flex shrink-0 items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 font-ui text-sm font-bold text-emerald-700"
+            class="inline-flex shrink-0 items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2 font-ui text-sm font-bold text-emerald-700"
           >
             <CheckCircle2 class="size-4" stroke-width={2.4} />
             22.8% Verified Distance Reduction
@@ -1319,7 +1319,7 @@ const currentYear = new Date().getFullYear();
                 </p>
               </div>
               <span
-                class="hidden rounded-full bg-[#eef5ff] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
+                class="hidden rounded-md bg-[#eef5ff] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
               >
                 Origin: GJ03CJ0022 · 5 Waypoints
               </span>
@@ -1343,7 +1343,7 @@ const currentYear = new Date().getFullYear();
                 Dynamic Matrix Solver: 18.3 km · 32 MIN ETA
               </div>
               <span
-                class="rounded-full bg-brand-orange-soft px-3 py-1 font-mono text-[0.65rem] font-bold uppercase text-brand-orange"
+                class="rounded-md bg-brand-orange-soft px-3 py-1 font-mono text-[0.65rem] font-bold uppercase text-brand-orange"
               >
                 5/50 Stops Optimized
               </span>
@@ -1540,7 +1540,7 @@ const currentYear = new Date().getFullYear();
                 max="250"
                 step="1"
                 value="30"
-                class="roi-slider mt-4 h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-300 outline-none [&::-moz-range-thumb]:size-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-brand-orange [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:shadow-md [&::-webkit-slider-thumb]:size-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-brand-orange [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-md"
+                class="roi-slider mt-4 h-2 w-full cursor-pointer appearance-none rounded-sm bg-slate-300 outline-none [&::-moz-range-thumb]:size-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-brand-orange [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:shadow-md [&::-webkit-slider-thumb]:size-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-brand-orange [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-md"
               />
               <div
                 class="mt-2 flex justify-between font-ui text-xs text-brand-muted"
@@ -1571,7 +1571,7 @@ const currentYear = new Date().getFullYear();
                 max="90000"
                 step="1000"
                 value="35000"
-                class="roi-slider mt-4 h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-300 outline-none [&::-moz-range-thumb]:size-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-brand-orange [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:shadow-md [&::-webkit-slider-thumb]:size-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-brand-orange [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-md"
+                class="roi-slider mt-4 h-2 w-full cursor-pointer appearance-none rounded-sm bg-slate-300 outline-none [&::-moz-range-thumb]:size-5 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-[3px] [&::-moz-range-thumb]:border-brand-orange [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:shadow-md [&::-webkit-slider-thumb]:size-5 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-[3px] [&::-webkit-slider-thumb]:border-brand-orange [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-md"
               />
               <div
                 class="mt-2 flex justify-between font-ui text-xs text-brand-muted"
@@ -1626,7 +1626,7 @@ const currentYear = new Date().getFullYear();
                 Projected Value Delivery
               </p>
               <span
-                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-3 py-1 font-ui text-[0.65rem] font-bold uppercase text-emerald-400"
+                class="inline-flex items-center gap-1.5 rounded-md bg-emerald-500/15 px-3 py-1 font-ui text-[0.65rem] font-bold uppercase text-emerald-400"
               >
                 Audited Model
               </span>
@@ -2047,7 +2047,7 @@ const currentYear = new Date().getFullYear();
     <section id="contact" class="bg-[#a83a10] py-20 text-white sm:py-24">
       <div class="container-page text-center">
         <p
-          class="mx-auto inline-flex rounded-full bg-white/15 px-5 py-2 font-ui text-sm font-bold uppercase tracking-[0.14em] text-white/90"
+          class="mx-auto inline-flex rounded-lg bg-white/15 px-5 py-2 font-ui text-sm font-bold uppercase tracking-[0.14em] text-white/90"
         >
           Zero Install · Immediate Field Testing
         </p>
