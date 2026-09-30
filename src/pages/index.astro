@@ -47,6 +47,10 @@ import {
   Check,
   Minus,
   ImageOff,
+  BarChart3,
+  PiggyBank,
+  Activity,
+  UserCheck,
 } from "@lucide/astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -141,6 +145,47 @@ const dispatchFeatures = [
   },
 ];
 
+const fuelAnalysisFeatures = [
+  {
+    icon: Fuel,
+    title: "Fuel Bought vs Kilometers Tracked",
+    body: "Matches every receipt to actual vehicle distance so finance can spot overbuying, route abuse, and underperforming vehicles without spreadsheet reconciliation.",
+  },
+  {
+    icon: BarChart3,
+    title: "Cost Per KM & L/100 KM Ranking",
+    body: "Ranks drivers and plates by fuel use, cost per kilometer, and month-on-month change to identify exactly where margin is leaking.",
+  },
+  {
+    icon: PiggyBank,
+    title: "Savings Opportunity Calculator",
+    body: "Highlights the vehicles that can save the most if they return to fleet-average efficiency, turning fuel analysis into a clear action list.",
+  },
+];
+
+const actionLogBenefits = [
+  {
+    icon: FileText,
+    title: "Complete Paper Trail",
+    body: "Every receipt edit, vehicle change, export, alert review, and team action is timestamped with the person responsible.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Audit-Ready Accountability",
+    body: "Admins can prove who approved claims, changed fleet data, or accessed sensitive operational records during any period.",
+  },
+  {
+    icon: Activity,
+    title: "Operational Pattern Visibility",
+    body: "Activity charts reveal busy teams, high-change areas, and recurring corrections before they become finance or compliance risk.",
+  },
+  {
+    icon: UserCheck,
+    title: "Less Admin Leakage",
+    body: "Quickly identify duplicate work, unnecessary corrections, and avoidable disputes to save controller hours and protect monthly fuel budgets.",
+  },
+];
+
 const modules = [
   {
     id: "dispatch",
@@ -165,8 +210,19 @@ const modules = [
     image: "/landing/live-tracking.webp",
   },
   {
+    id: "trip-replay",
+    tabLabel: "3. Trip Replay",
+    icon: TimerReset,
+    eyebrow: "Fleet History & Playback",
+    title: "Trip Replay & Movement Evidence",
+    body: "Replay where a vehicle went, how fast it moved, where it stopped, and which driver was responsible across any shift window.",
+    tag1: "REPLAY READY",
+    tag2: "AVAILABLE",
+    image: "/landing/trip-replay.webp",
+  },
+  {
     id: "summary",
-    tabLabel: "3. Command Summary",
+    tabLabel: "4. Command Summary",
     icon: ClipboardList,
     eyebrow: "Fleet-Wide Operational Rollup",
     title: "Command Summary Dashboard",
@@ -177,7 +233,7 @@ const modules = [
   },
   {
     id: "expense",
-    tabLabel: "4. AI Expense Review",
+    tabLabel: "5. AI Expense Review",
     icon: Receipt,
     eyebrow: "AI-Extracted Fuel & Toll Records",
     title: "AI Expense Review Workspace",
@@ -188,7 +244,7 @@ const modules = [
   },
   {
     id: "alerts",
-    tabLabel: "5. Alert Command",
+    tabLabel: "6. Alert Command",
     icon: Siren,
     eyebrow: "Risk & Incident Response",
     title: "Alert Command Center",
@@ -405,7 +461,7 @@ const currentYear = new Date().getFullYear();
             </span>
           </div>
 
-          <div class="overflow-hidden bg-[#f8faf9]">
+          <div class="overflow-hidden bg-white">
             <img
               src="/landing/overview.webp"
               alt="NetTrax fleet command overview dashboard"
@@ -419,7 +475,7 @@ const currentYear = new Date().getFullYear();
     </section>
 
     <section
-      class="border-t border-brand-border bg-[#f6fbfd] pb-16 pt-12 sm:pb-20 sm:pt-16"
+      class="border-t border-brand-border bg-[#fbf8f2] pb-16 pt-12 sm:pb-20 sm:pt-16"
     >
       <div class="container-page">
         <div id="solutions" class="mx-auto max-w-3xl text-center">
@@ -575,7 +631,7 @@ const currentYear = new Date().getFullYear();
 
         <div class="mt-12 grid gap-5 lg:grid-cols-2">
           <article
-            class="rounded-3xl border border-brand-border bg-[#f8fbfd] p-5 shadow-xl shadow-brand-blue/8 sm:p-6"
+            class="rounded-3xl border border-brand-border bg-[#fbf8f2] p-5 shadow-xl shadow-brand-blue/8 sm:p-6"
           >
             <div class="flex items-start justify-between gap-6">
               <div>
@@ -807,7 +863,7 @@ const currentYear = new Date().getFullYear();
       </div>
     </section>
 
-    <section id="technology-stack" class="bg-[#eef5ff] py-20 sm:py-24">
+    <section id="technology-stack" class="bg-[#fbf8f2] py-20 sm:py-24">
       <div class="container-page">
         <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
@@ -874,7 +930,7 @@ const currentYear = new Date().getFullYear();
               </div>
             </div>
             <span
-              class="rounded-lg bg-[#e7eefc] px-4 py-2 font-mono text-sm text-brand-muted"
+              class="rounded-lg bg-[#fbf8f2] px-4 py-2 font-mono text-sm text-brand-muted"
               >Strict Layer Decoupling</span
             >
           </div>
@@ -919,7 +975,7 @@ const currentYear = new Date().getFullYear();
                   n: "2",
                   badge: "bg-brand-blue",
                   tag: "Real-Time Ingestion",
-                  tagClass: "bg-[#e7eefc] text-brand-blue",
+                  tagClass: "bg-[#fbf8f2] text-brand-blue",
                   mono: "Stream Deduplication",
                   title: "Ingest & Normalisation",
                   sub: "Continuous asynchronous high-frequency streaming bus",
@@ -959,7 +1015,7 @@ const currentYear = new Date().getFullYear();
                   n: "4",
                   badge: "bg-brand-blue",
                   tag: "Bounded Routing Boundary",
-                  tagClass: "bg-[#e7eefc] text-brand-blue",
+                  tagClass: "bg-[#fbf8f2] text-brand-blue",
                   mono: "Specialist Engine",
                   title: "Licensed Mapping & Routing Engine",
                   sub: "Commercial-grade spatial algorithms & heavy vehicle routing",
@@ -1039,7 +1095,7 @@ const currentYear = new Date().getFullYear();
                       <p class="text-sm leading-6 text-[#4b352f]">{l.body}</p>
                       <div class="mt-4 grid gap-2.5 sm:grid-cols-2">
                         {l.tags.map((t) => (
-                          <div class="flex items-center gap-2.5 rounded-xl bg-[#f8fbfd] px-3 py-2">
+                          <div class="flex items-center gap-2.5 rounded-xl bg-[#fbf8f2] px-3 py-2">
                             <t.icon
                               class="size-4 shrink-0 text-brand-orange"
                               stroke-width={2.2}
@@ -1053,7 +1109,7 @@ const currentYear = new Date().getFullYear();
                     </div>
 
                     <div class="flex gap-3 lg:flex-col lg:gap-2">
-                      <div class="flex-1 rounded-xl bg-[#f8fbfd] px-3 py-2.5">
+                      <div class="flex-1 rounded-xl bg-[#fbf8f2] px-3 py-2.5">
                         <p class="font-mono text-[0.62rem] font-bold uppercase tracking-wide text-brand-muted">
                           {l.stat1[0]}
                         </p>
@@ -1061,7 +1117,7 @@ const currentYear = new Date().getFullYear();
                           {l.stat1[1]}
                         </p>
                       </div>
-                      <div class="flex-1 rounded-xl bg-[#f8fbfd] px-3 py-2.5">
+                      <div class="flex-1 rounded-xl bg-[#fbf8f2] px-3 py-2.5">
                         <p class="font-mono text-[0.62rem] font-bold uppercase tracking-wide text-brand-muted">
                           {l.stat2[0]}
                         </p>
@@ -1133,7 +1189,7 @@ const currentYear = new Date().getFullYear();
         >
           <!-- Map card -->
           <div
-            class="flex flex-col overflow-hidden rounded-3xl border border-brand-border bg-[#f8fbfd] shadow-lg shadow-brand-blue/8"
+            class="flex flex-col overflow-hidden rounded-3xl border border-brand-border bg-[#fbf8f2] shadow-lg shadow-brand-blue/8"
           >
             <div
               class="flex items-center justify-between border-b border-brand-border bg-white px-5 py-3.5"
@@ -1149,7 +1205,7 @@ const currentYear = new Date().getFullYear();
                 </p>
               </div>
               <span
-                class="hidden rounded-md bg-[#eef5ff] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
+                class="hidden rounded-md bg-[#fbf8f2] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
               >
                 15 / 30 / 45 min overlay
               </span>
@@ -1207,7 +1263,7 @@ const currentYear = new Date().getFullYear();
             <div class="mt-5 flex-1 space-y-2.5">
               {
                 pipelineSteps.map((step, i) => (
-                  <div class="group flex items-start gap-3 rounded-2xl border border-brand-border bg-[#f8fbfd] p-3.5 transition duration-300 hover:border-brand-orange/40 hover:bg-white hover:shadow-sm">
+                  <div class="group flex items-start gap-3 rounded-2xl border border-brand-border bg-[#fbf8f2] p-3.5 transition duration-300 hover:border-brand-orange/40 hover:bg-white hover:shadow-sm">
                     <span class="grid size-9 shrink-0 place-items-center rounded-xl bg-brand-orange font-display text-sm text-white">
                       {i + 1}
                     </span>
@@ -1234,7 +1290,7 @@ const currentYear = new Date().getFullYear();
       </div>
     </section>
 
-    <section class="border-t border-brand-border bg-[#eef1ff] py-16 sm:py-20">
+    <section class="border-t border-brand-border bg-[#fbf8f2] py-16 sm:py-20">
       <div class="container-page">
         <div class="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
           <div class="max-w-3xl">
@@ -1303,7 +1359,7 @@ const currentYear = new Date().getFullYear();
 
           <!-- Dispatch studio screenshot -->
           <div
-            class="flex flex-col overflow-hidden rounded-3xl border border-brand-border bg-[#f8fbfd] shadow-lg shadow-brand-blue/8"
+            class="flex flex-col overflow-hidden rounded-3xl border border-brand-border bg-[#fbf8f2] shadow-lg shadow-brand-blue/8"
           >
             <div
               class="flex items-center justify-between border-b border-brand-border bg-white px-5 py-3.5"
@@ -1319,7 +1375,7 @@ const currentYear = new Date().getFullYear();
                 </p>
               </div>
               <span
-                class="hidden rounded-md bg-[#eef5ff] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
+                class="hidden rounded-md bg-[#fbf8f2] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
               >
                 Origin: GJ03CJ0022 · 5 Waypoints
               </span>
@@ -1353,9 +1409,259 @@ const currentYear = new Date().getFullYear();
       </div>
     </section>
 
+    <section class="border-t border-brand-border bg-white py-16 sm:py-20">
+      <div class="container-page">
+        <div class="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div class="max-w-3xl">
+            <p
+              class="font-ui text-sm font-bold uppercase tracking-[0.14em] text-brand-orange"
+            >
+              Fuel KM Analysis
+            </p>
+            <h2
+              class="mt-4 font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
+            >
+              Fuel Economy Intelligence That Shows Where Money Leaks
+            </h2>
+            <p class="mt-5 text-base leading-7 text-brand-muted">
+              Compare fuel bought against kilometers tracked per vehicle and
+              driver. NetTrax turns receipts and GPS distance into clear L/100
+              km, cost per km, and savings opportunity reports.
+            </p>
+          </div>
+
+          <span
+            class="inline-flex shrink-0 items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2 font-ui text-sm font-bold text-emerald-700"
+          >
+            <PiggyBank class="size-4" stroke-width={2.4} />
+            ZAR 303k Savings Opportunity
+          </span>
+        </div>
+
+        <div
+          class="mt-10 grid gap-6 lg:grid-cols-[1.12fr_0.88fr] lg:items-stretch"
+        >
+          <div
+            class="flex flex-col overflow-hidden rounded-3xl border border-brand-border bg-[#fbf8f2] shadow-lg shadow-brand-blue/8"
+          >
+            <div
+              class="flex items-center justify-between border-b border-brand-border bg-white px-5 py-3.5"
+            >
+              <div class="flex items-center gap-2.5">
+                <span
+                  class="grid size-8 place-items-center rounded-lg bg-brand-orange-soft text-brand-orange"
+                >
+                  <Fuel class="size-4" stroke-width={2.2} />
+                </span>
+                <p class="font-ui text-sm font-bold text-brand-blue">
+                  Fuel Economy Analytics Workspace
+                </p>
+              </div>
+              <span
+                class="hidden rounded-md bg-[#fbf8f2] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
+              >
+                Fuel bought / km tracked
+              </span>
+            </div>
+
+            <img
+              src="/landing/fuel-economy.webp"
+              alt="NetTrax fuel economy analysis showing fuel bought, kilometers tracked, cost per kilometer, and savings opportunity"
+              class="w-full"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div
+              class="mt-auto grid gap-2.5 border-t border-brand-border bg-white p-5 sm:grid-cols-3"
+            >
+              <div
+                class="rounded-xl border border-emerald-100 bg-emerald-50/50 p-3.5"
+              >
+                <p class="font-display text-xl leading-none text-emerald-700">
+                  ZAR 5.27
+                </p>
+                <p class="mt-1 font-ui text-xs font-bold text-brand-blue">
+                  Fleet cost per kilometer
+                </p>
+              </div>
+              <div
+                class="rounded-xl border border-amber-100 bg-amber-50/50 p-3.5"
+              >
+                <p class="font-display text-xl leading-none text-amber-700">
+                  23.0 L/100 km
+                </p>
+                <p class="mt-1 font-ui text-xs font-bold text-brand-blue">
+                  Fuel use benchmark
+                </p>
+              </div>
+              <div
+                class="rounded-xl border border-rose-100 bg-rose-50/50 p-3.5"
+              >
+                <p class="font-display text-xl leading-none text-rose-700">
+                  Top 5
+                </p>
+                <p class="mt-1 font-ui text-xs font-bold text-brand-blue">
+                  Vehicles ranked by waste
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <h3
+              class="font-display text-xl leading-none text-brand-blue sm:text-2xl"
+            >
+              From Fuel Receipts To Corrective Action
+            </h3>
+            <p class="mt-3 text-sm leading-6 text-brand-muted">
+              Instead of only showing spend totals, NetTrax connects the spend
+              to actual movement and shows the vehicles that can immediately
+              improve fleet margin.
+            </p>
+
+            <div class="mt-5 flex-1 space-y-3">
+              {
+                fuelAnalysisFeatures.map((f) => (
+                  <div class="flex gap-4 rounded-2xl border border-brand-border bg-[#fbf8f2] p-4 shadow-sm transition duration-300 hover:border-brand-orange/40 hover:bg-white hover:shadow-md">
+                    <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-orange-soft text-brand-orange">
+                      <f.icon class="size-5" stroke-width={2.2} />
+                    </span>
+                    <div class="min-w-0">
+                      <h4 class="font-ui text-sm font-bold text-brand-blue">
+                        {f.title}
+                      </h4>
+                      <p class="mt-1.5 text-sm leading-6 text-brand-muted">
+                        {f.body}
+                      </p>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-brand-border bg-[#fbf8f2] py-16 sm:py-20">
+      <div class="container-page">
+        <div class="grid gap-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+          <div class="max-w-3xl">
+            <p
+              class="font-ui text-sm font-bold uppercase tracking-[0.14em] text-brand-orange"
+            >
+              Action Log & Audit Trail
+            </p>
+            <h2
+              class="mt-4 font-display text-3xl leading-[1.04] text-brand-blue sm:text-4xl lg:text-5xl"
+            >
+              See Who Changed What, Prove It Later
+            </h2>
+          </div>
+          <p class="max-w-2xl text-base leading-7 text-brand-muted lg:ml-auto">
+            Every operational edit becomes searchable evidence. Build a clean
+            paper trail for finance disputes, driver accountability, customer
+            claims, and internal compliance reviews.
+          </p>
+        </div>
+
+        <div
+          class="mt-10 grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch"
+        >
+          <div class="flex flex-col">
+            <div class="grid flex-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              {
+                actionLogBenefits.map((f) => (
+                  <div class="flex gap-4 rounded-2xl border border-brand-border bg-white p-4 shadow-sm transition duration-300 hover:border-brand-orange/40 hover:shadow-md">
+                    <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-orange-soft text-brand-orange">
+                      <f.icon class="size-5" stroke-width={2.2} />
+                    </span>
+                    <div class="min-w-0">
+                      <h4 class="font-ui text-sm font-bold text-brand-blue">
+                        {f.title}
+                      </h4>
+                      <p class="mt-1.5 text-sm leading-6 text-brand-muted">
+                        {f.body}
+                      </p>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col overflow-hidden rounded-3xl border border-brand-border bg-white shadow-lg shadow-brand-blue/8"
+          >
+            <div
+              class="flex items-center justify-between border-b border-brand-border bg-white px-5 py-3.5"
+            >
+              <div class="flex items-center gap-2.5">
+                <span
+                  class="grid size-8 place-items-center rounded-lg bg-brand-orange-soft text-brand-orange"
+                >
+                  <FileText class="size-4" stroke-width={2.2} />
+                </span>
+                <p class="font-ui text-sm font-bold text-brand-blue">
+                  Action Log Security Workspace
+                </p>
+              </div>
+              <span
+                class="hidden rounded-md bg-[#fbf8f2] px-3 py-1 font-mono text-[0.65rem] text-brand-muted sm:inline"
+              >
+                searchable audit evidence
+              </span>
+            </div>
+
+            <img
+              src="/landing/action-log.webp"
+              alt="NetTrax action log showing searchable team activity, event counts, and audit trail charts"
+              class="w-full"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div
+              class="mt-auto grid gap-2.5 border-t border-brand-border bg-white p-5 sm:grid-cols-3"
+            >
+              <div
+                class="rounded-xl border border-emerald-100 bg-emerald-50/50 p-3.5"
+              >
+                <p class="font-display text-xl leading-none text-emerald-700">
+                  6-12 hrs
+                </p>
+                <p class="mt-1 font-ui text-xs font-bold text-brand-blue">
+                  Monthly admin time saved
+                </p>
+              </div>
+              <div
+                class="rounded-xl border border-amber-100 bg-amber-50/50 p-3.5"
+              >
+                <p class="font-display text-xl leading-none text-amber-700">
+                  23 events
+                </p>
+                <p class="mt-1 font-ui text-xs font-bold text-brand-blue">
+                  Searchable this period
+                </p>
+              </div>
+              <div class="rounded-xl border border-brand-border bg-white p-3.5">
+                <p class="font-display text-xl leading-none text-brand-blue">
+                  100%
+                </p>
+                <p class="mt-1 font-ui text-xs font-bold text-brand-blue">
+                  Timestamped ownership
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
       id="platform"
-      class="border-t border-brand-border bg-[#eef1ff] py-8 sm:py-10"
+      class="border-t border-brand-border bg-white py-8 sm:py-10"
     >
       <div class="container-page">
         <div class="grid gap-4 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
@@ -1377,23 +1683,38 @@ const currentYear = new Date().getFullYear();
         </div>
 
         <div
-          class="mt-5 flex flex-wrap gap-2 border-b border-brand-border pb-3"
+          class="mt-5 grid gap-3 border-b border-brand-border pb-4 sm:grid-cols-2 lg:grid-cols-6"
           data-module-tabs
         >
           {
             modules.map((m, i) => (
               <button
                 type="button"
+                aria-selected={i === 0 ? "true" : "false"}
                 data-module-tab={m.id}
                 class:list={[
-                  "inline-flex items-center gap-2 rounded-xl border px-3 py-2 font-ui text-[0.72rem] font-bold uppercase tracking-tight shadow-sm transition hover:border-brand-orange hover:text-brand-orange",
-                  i === 0
-                    ? "border-brand-orange bg-brand-orange text-white"
-                    : "border-brand-border bg-white text-brand-muted",
+                  "group min-w-0 text-left font-ui text-[0.72rem] font-bold uppercase tracking-tight transition hover:text-brand-orange",
+                  i === 0 ? "text-brand-blue" : "text-brand-muted",
                 ]}
               >
-                <m.icon class="size-4" stroke-width={2.2} />
-                {m.tabLabel}
+                <span
+                  data-module-track={m.id}
+                  class:list={[
+                    "block h-2.5 w-full overflow-hidden rounded-full shadow-inner ring-1 transition-colors",
+                    i === 0
+                      ? "bg-brand-orange/10 ring-brand-orange/40"
+                      : "bg-[#eadfce] ring-[#d9cbb8]",
+                  ]}
+                >
+                  <span
+                    data-module-progress={m.id}
+                    class="block h-full w-0 rounded-full bg-brand-orange transition-[width] duration-75 ease-linear"
+                  />
+                </span>
+                <span class="mt-2 flex items-center gap-2 truncate">
+                  <m.icon class="size-4 shrink-0" stroke-width={2.2} />
+                  <span class="truncate">{m.tabLabel}</span>
+                </span>
               </button>
             ))
           }
@@ -1447,7 +1768,7 @@ const currentYear = new Date().getFullYear();
                         decoding="async"
                       />
                     ) : (
-                      <div class="flex h-full flex-col items-center justify-center gap-3 bg-[#f8fbfd] p-10 text-center">
+                      <div class="flex h-full flex-col items-center justify-center gap-3 bg-[#fbf8f2] p-10 text-center">
                         <span class="grid size-12 place-items-center rounded-2xl bg-white text-brand-muted shadow-sm">
                           <ImageOff class="size-6" stroke-width={1.8} />
                         </span>
@@ -1465,20 +1786,30 @@ const currentYear = new Date().getFullYear();
       </div>
     </section>
     <script>
-      const moduleTabs = document.querySelectorAll("[data-module-tab]");
-      const modulePanels = document.querySelectorAll("[data-module-panel]");
+      (() => {
+        const moduleTabs = Array.from(
+          document.querySelectorAll("[data-module-tab]"),
+        );
+        const modulePanels = document.querySelectorAll("[data-module-panel]");
+        const progressBars = document.querySelectorAll(
+          "[data-module-progress]",
+        );
+        const progressTracks = document.querySelectorAll("[data-module-track]");
+        const intervalMs = 5200;
+        let activeIndex = 0;
+        let cycleStartedAt = performance.now();
+        let frameId = 0;
 
-      moduleTabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          const selected = tab.getAttribute("data-module-tab");
+        const setActiveModule = (nextIndex) => {
+          activeIndex = nextIndex;
+          const selected =
+            moduleTabs[activeIndex]?.getAttribute("data-module-tab");
+          cycleStartedAt = performance.now();
 
           moduleTabs.forEach((item) => {
             const active = item.getAttribute("data-module-tab") === selected;
-            item.classList.toggle("border-brand-orange", active);
-            item.classList.toggle("bg-brand-orange", active);
-            item.classList.toggle("text-white", active);
-            item.classList.toggle("border-brand-border", !active);
-            item.classList.toggle("bg-white", !active);
+            item.setAttribute("aria-selected", active ? "true" : "false");
+            item.classList.toggle("text-brand-blue", active);
             item.classList.toggle("text-brand-muted", !active);
           });
 
@@ -1488,12 +1819,60 @@ const currentYear = new Date().getFullYear();
               panel.getAttribute("data-module-panel") !== selected,
             );
           });
+
+          progressBars.forEach((bar) => {
+            bar.style.width = "0%";
+          });
+
+          progressTracks.forEach((track) => {
+            const active = track.getAttribute("data-module-track") === selected;
+            track.classList.toggle("bg-brand-orange/10", active);
+            track.classList.toggle("ring-brand-orange/40", active);
+            track.classList.toggle("bg-[#eadfce]", !active);
+            track.classList.toggle("ring-[#d9cbb8]", !active);
+          });
+        };
+
+        const tick = (now) => {
+          const elapsed = now - cycleStartedAt;
+          const selected =
+            moduleTabs[activeIndex]?.getAttribute("data-module-tab");
+          const progress = Math.min(elapsed / intervalMs, 1);
+
+          progressBars.forEach((bar) => {
+            const active =
+              bar.getAttribute("data-module-progress") === selected;
+            bar.style.width = `${active ? progress * 100 : 0}%`;
+          });
+
+          if (elapsed >= intervalMs && moduleTabs.length > 0) {
+            setActiveModule((activeIndex + 1) % moduleTabs.length);
+          }
+
+          frameId = window.requestAnimationFrame(tick);
+        };
+
+        moduleTabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => setActiveModule(index));
         });
-      });
+
+        setActiveModule(0);
+        frameId = window.requestAnimationFrame(tick);
+
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            window.cancelAnimationFrame(frameId);
+            return;
+          }
+
+          cycleStartedAt = performance.now();
+          frameId = window.requestAnimationFrame(tick);
+        });
+      })();
     </script>
     <section
       id="roi"
-      class="border-t border-brand-border bg-white py-16 sm:py-20"
+      class="border-t border-brand-border bg-[#fbf8f2] py-16 sm:py-20"
     >
       <div class="container-page">
         <p
@@ -1518,7 +1897,7 @@ const currentYear = new Date().getFullYear();
         >
           <!-- Inputs -->
           <div
-            class="rounded-3xl border border-brand-border bg-[#eef1ff] p-6 sm:p-8"
+            class="rounded-3xl border border-brand-border bg-[#fbf8f2] p-6 sm:p-8"
           >
             <div>
               <div class="flex items-baseline justify-between">
@@ -1777,7 +2156,7 @@ const currentYear = new Date().getFullYear();
       initRoiCalculator();
     </script>
 
-    <section class="border-t border-brand-border bg-[#f6fbfd] py-16 sm:py-20">
+    <section class="border-t border-brand-border bg-white py-16 sm:py-20">
       <div class="container-page">
         <p
           class="font-ui text-sm font-bold uppercase tracking-[0.14em] text-brand-orange"
@@ -1802,12 +2181,12 @@ const currentYear = new Date().getFullYear();
               <thead>
                 <tr>
                   <th
-                    class="sticky left-0 bg-[#eef5ff] px-6 py-4 font-ui text-sm font-bold text-brand-blue"
+                    class="sticky left-0 bg-[#fbf8f2] px-6 py-4 font-ui text-sm font-bold text-brand-blue"
                   >
                     Capability & Infrastructure
                   </th>
                   <th
-                    class="w-32 bg-[#eef5ff] px-4 py-4 text-center font-ui text-sm font-bold text-brand-blue sm:w-40"
+                    class="w-32 bg-[#fbf8f2] px-4 py-4 text-center font-ui text-sm font-bold text-brand-blue sm:w-40"
                   >
                     Standard
                   </th>
@@ -1880,7 +2259,7 @@ const currentYear = new Date().getFullYear();
       </div>
     </section>
 
-    <section class="bg-[#eef5ff] py-16 sm:py-20">
+    <section class="bg-[#fbf8f2] py-16 sm:py-20">
       <div class="container-page">
         <p
           class="font-ui text-sm font-bold uppercase tracking-[0.14em] text-brand-orange"
@@ -1988,7 +2367,7 @@ const currentYear = new Date().getFullYear();
     <section class="bg-white py-16 sm:py-20">
       <div class="container-page">
         <div
-          class="rounded-3xl border border-brand-border bg-[#eef5ff] p-8 shadow-sm sm:p-10"
+          class="rounded-3xl border border-brand-border bg-[#fbf8f2] p-8 shadow-sm sm:p-10"
         >
           <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
@@ -2026,7 +2405,7 @@ const currentYear = new Date().getFullYear();
                 >
               </div>
             </div>
-            <div class="lg:min-w-72">
+            <!-- <div class="lg:min-w-72">
               <a
                 href="#contact"
                 class="inline-flex w-full items-center justify-center rounded-xl bg-[#07182d] px-6 py-4 font-ui text-sm font-bold text-white shadow-lg transition hover:bg-brand-blue"
@@ -2038,7 +2417,7 @@ const currentYear = new Date().getFullYear();
               >
                 Or call 24/7 Ops: +27 (0) 11 098 4000
               </p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -2093,7 +2472,7 @@ const currentYear = new Date().getFullYear();
       </div>
     </section>
 
-    <footer class="bg-[#eef5ff] py-10">
+    <footer class="bg-[#fbf8f2] py-10">
       <div class="container-page">
         <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
